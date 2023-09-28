@@ -31,12 +31,20 @@ export async function POST(req: NextRequest){
             }, {status: 400})
         }
 
-        //create token data
-        const tokenData = {
+        if (!user.isVerified){
+            return NextResponse.json({
+                message: "Kindly check your mail to verify your user",
+                success: false
+            })
+        }
+        
+
+          //create token data
+          const tokenData = {
             id: user._id,
             username: user.username,
-            email: user.email
-        }
+            email: user.email,
+          };
 
         //create the token
         const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET!, {expiresIn: "1d"});

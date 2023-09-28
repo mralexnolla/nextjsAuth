@@ -15,14 +15,22 @@ const LoginPage = () => {
 
      const [buttonDisabled, setButtonDisabled] = useState(false);
      const [loading, setLoading] = useState(false);
+     const [ermsg, setErmsg] = useState("")
 
      const onlogin = async () => {
       try {
         setLoading(true)
         const response = await axios.post('/api/users/login', user )
         console.log("Loging successfull", response.data)
-        toast.success("Loging successfull")
-        router.push("/profile")
+        if(response.data.success){
+            toast.success("Loging successfull");
+            router.push("/profile");
+        }else{
+          setErmsg(response.data.message);
+          toast.success(response.data.message);
+        }
+        
+        
         
       } catch (error: any) {
         console.log("Failed login", error.message);
@@ -78,6 +86,7 @@ const LoginPage = () => {
       >
         {buttonDisabled ? "no login" : "login"}
       </button>
+      <h2 className="p-2 text-red-500 font-semibold">{ermsg}</h2>
       <Link href="/signup">Visit signup page</Link>
     </div>
   );
