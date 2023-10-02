@@ -49,15 +49,16 @@ export const sendEmail = async({email, emailType, userId}: any) => {
             to: email,
             subject: emailType === "VERIFY" ? "Verify your email" : "Reset your password",
             html: `
+              
               <p>
-                 Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">here</a> to 
+                 Click <a href="${process.env.DOMAIN}/${emailType === "VERIFY" ? "verifyemail" : "verifyforgotpassword" }?token=${hashedToken}">here</a> to 
                  ${emailType === "VERIFY" ? "Verify your email" : "Reset your password"}
               </p>
             `
           }
 
           const mailresponse = await transport.sendMail(mailOptions);
-          console.log(mailresponse);
+          //console.log(mailresponse);
           return mailresponse;
 
     } catch (error: any) {

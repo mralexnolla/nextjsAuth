@@ -55,6 +55,8 @@ const LoginPage = () => {
          [name]: value,
        }));
      };
+
+     
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <h1 className="mb-2">{loading ? "Processing" : "Login"}</h1>
@@ -88,6 +90,7 @@ const LoginPage = () => {
       </button>
       <h2 className="p-2 text-red-500 font-semibold">{ermsg}</h2>
       <Link href="/signup">Visit signup page</Link>
+      <Link href="/forgotpassword">forgot password</Link>
     </div>
   );
 }
