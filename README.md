@@ -47,7 +47,8 @@ This app was aimed at learning Nextjs by builfing an authentication app `by Alex
 - nodemailer
 - google smtb
 
-![image source](./Alex%20Nolla.png)
+<!-- [image source](./Alex%20Nolla.png) -->
+<img src='./Alex%20Nolla.png' alt='Alex Nolla' width='300px'>
 
 ## Email : `alex.nollabell@gmail.com`
 
