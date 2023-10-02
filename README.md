@@ -1,3 +1,22 @@
+# What the App is meant for
+
+The purpose of this application was to acquire knowledge of Next.js by constructing an authentication app. `by Alex Nolla`
+
+## Tech stack
+
+- Nextjs
+- typescript
+- mongoDB
+- nodemailer
+- google smtb
+
+<!-- [image source](./Alex%20Nolla.png) -->
+<img src='./Alex%20Nolla.png' alt='Alex Nolla' width='300px'>
+
+## Email : `alex.nollabell@gmail.com`
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,21 +53,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 #
-
-# What the App is meant for
-
-This app was aimed at learning Nextjs by builfing an authentication app `by Alex Nolla`
-
-## Tech stack
-
-- Nextjs
-- typescript
-- mongoDB
-- nodemailer
-- google smtb
-
-<!-- [image source](./Alex%20Nolla.png) -->
-<img src='./Alex%20Nolla.png' alt='Alex Nolla' width='300px'>
-
-## Email : `alex.nollabell@gmail.com`
 
